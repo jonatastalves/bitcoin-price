@@ -26,3 +26,15 @@
   a:hover{
     opacity: 0.8;
   }
+
+  .container{
+      width: 90%;
+  }
+
+  main{
+      
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+
+  }

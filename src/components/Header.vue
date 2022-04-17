@@ -11,9 +11,13 @@
 
                 <img alt="Bitcoin-price" id="menu-logo" src="https://cdn-images-1.medium.com/max/1200/1*UlDujYjQ6qMTV_b2klTOYg.png">
 
-                <p id="historical"> View historical price</p>
-                
-                <input type="date" name="date-search" id="date-search">
+                <div id="search-api">
+                    <p id="historical"> View historical price:</p>
+                    
+                    <input type="date" name="date-search" id="date-search">
+
+                    <input type="button" value="Buscar" id="button-search">
+                </div>
 
             </div>
 
@@ -106,10 +110,12 @@ nav{
 
 }
 
-#date-search{
-
-    margin: 20px 0px;
-
+#search-api{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
 }
 
 @media (min-width: 700px){
@@ -123,11 +129,15 @@ nav{
         flex-direction: row;
         position: static;
         height: 60px;
-        width: auto;
+        width: 25%;
     }
 
-    #historical{
-        margin-right: 20px;
+    #search-api{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     }
      
 }

@@ -2,10 +2,6 @@
     <div>
         <main>
             <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
         </main>
     </div>
 </template>
@@ -28,8 +24,8 @@ main{
 }
 
 .card{
-    width: 160px;
-    height: 200px;
+    width: 70vw;
+    height: 60vh;
     background-color: var(--color-background-card);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.246) 10px 10px;
@@ -43,8 +39,8 @@ main{
 
     .card{        
        
-        width: 180px;
-        height: 220px;
+        width: 80vw;
+        height: 35vw;
     }
     
 }

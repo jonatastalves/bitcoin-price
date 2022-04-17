@@ -1,7 +1,11 @@
 <template>
     <div>
         <main>
-
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
         </main>
     </div>
 </template>
@@ -16,6 +20,33 @@ export default{
 
 main{
     background-color: var(--color-background-home);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 160px;
+    height: 200px;
+    background-color: var(--color-background-card);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.246) 10px 10px;
+}
+
+@media (min-width: 700px){
+
+    main{
+        justify-content: space-around;
+    }
+
+    .card{        
+       
+        width: 180px;
+        height: 220px;
+    }
+    
 }
 
 </style>

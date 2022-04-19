@@ -1,11 +1,11 @@
 <template>
-    <footer> Bitcoin Prince - Project for Dacxi selection process</footer>
+    <footer> Bitcoin Price </footer>
 </template>
 
 <script>
 
 export default{
-    name: 'Footer'
+    name: 'Footer'   
 }
 
 </script>

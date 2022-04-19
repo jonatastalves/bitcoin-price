@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav class="container">
-            <router-link to="/"><img alt="Bitcoin-price" id="logo" src="https://theme.zdassets.com/theme_assets/2284639/4b20ea7e1106988b0e6b99903a770e49692d7080.png"></router-link>
+            <router-link to="/bitcoin-price/"><img alt="Bitcoin-price" id="logo" src="https://theme.zdassets.com/theme_assets/2284639/4b20ea7e1106988b0e6b99903a770e49692d7080.png"></router-link>
 
             <img v-on:click="openMenu" alt="Abrir menu" id="menu-button" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
 

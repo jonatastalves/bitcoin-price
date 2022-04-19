@@ -11,7 +11,7 @@
 
                 <img alt="Bitcoin-price" id="menu-logo" src="https://cdn-images-1.medium.com/max/1200/1*UlDujYjQ6qMTV_b2klTOYg.png">
 
-            <router-link to="/historical"><button id="button-search">Search for date</button></router-link>
+            <ul><li><router-link to="/historical">Search for date</router-link></li></ul>
             
             </div>
 
@@ -140,6 +140,20 @@ nav{
     
 }
 
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin: 20px 0px;
+}
+
+ul li a{
+     color: var(--color-text-light);
+}
+
+
+
 @media (min-width: 700px){
     
     #menu-button, #menu-logo, #menu-overlay{
@@ -148,9 +162,8 @@ nav{
     #menu-items{
         display: flex;
         flex-direction: row;
-        position: static;
         height: 60px;
-        width: 18%;
+        width: 10%;
     }
     #search-api{
     display: flex;

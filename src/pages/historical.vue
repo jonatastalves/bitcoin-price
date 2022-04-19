@@ -4,38 +4,38 @@
             <input v-model="dateID" type="date" name="date-search" id="date-search">
             <button v-on:click="dateChoose" id="button-search">Search for date</button>
         </div>
-
-        <div class="card">
-            <h2>BITCOIN</h2>                
-                <p>USD: {{bitcoinPrice.usd}}</p>
-                <p>BRL: {{bitcoinPrice.brl}}</p>
-                <p>EUR: {{bitcoinPrice.eur}}</p>
+        <div class="amount-card">
+            <div class="card">
+                <h2>BITCOIN</h2>                
+                    <p>USD: {{bitcoinPrice.usd}}</p>
+                    <p>BRL: {{bitcoinPrice.brl}}</p>
+                    <p>EUR: {{bitcoinPrice.eur}}</p>
+            </div>
+            <div class="card">
+                <h2>DACXI</h2>                
+                    <p>USD: {{dacxiPrice.usd}}</p>
+                    <p>BRL: {{dacxiPrice.brl}}</p>
+                    <p>EUR: {{dacxiPrice.eur}}</p>
+            </div>
+            <div class="card">
+                <h2>ETHEREUM</h2>                
+                    <p>USD: {{ethereumPrice.usd}}</p>
+                    <p>BRL: {{ethereumPrice.brl}}</p>
+                    <p>EUR: {{ethereumPrice.eur}}</p>
+            </div>
+            <div class="card">
+                <h2>TERRA-LUNA</h2>                
+                    <p>USD: {{terra_lunaPrice.usd}}</p>
+                    <p>BRL: {{terra_lunaPrice.brl}}</p>
+                    <p>EUR: {{terra_lunaPrice.eur}}</p>
+            </div>
+            <div class="card">
+                <h2>COSMOS</h2>                
+                    <p>USD: {{cosmosPrice.usd}}</p>
+                    <p>BRL: {{cosmosPrice.brl}}</p>
+                    <p>EUR: {{cosmosPrice.eur}}</p>
+            </div>
         </div>
-        <div class="card">
-            <h2>DACXI</h2>                
-                <p>USD: {{dacxiPrice.usd}}</p>
-                <p>BRL: {{dacxiPrice.brl}}</p>
-                <p>EUR: {{dacxiPrice.eur}}</p>
-        </div>
-        <div class="card">
-            <h2>ETHEREUM</h2>                
-                <p>USD: {{ethereumPrice.usd}}</p>
-                <p>BRL: {{ethereumPrice.brl}}</p>
-                <p>EUR: {{ethereumPrice.eur}}</p>
-        </div>
-        <div class="card">
-            <h2>TERRA-LUNA</h2>                
-                <p>USD: {{terra_lunaPrice.usd}}</p>
-                <p>BRL: {{terra_lunaPrice.brl}}</p>
-                <p>EUR: {{terra_lunaPrice.eur}}</p>
-        </div>
-        <div class="card">
-            <h2>COSMOS</h2>                
-                <p>USD: {{cosmosPrice.usd}}</p>
-                <p>BRL: {{cosmosPrice.brl}}</p>
-                <p>EUR: {{cosmosPrice.eur}}</p>
-        </div>
-
     </main>
 </template>
 
@@ -105,7 +105,7 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 220vh;  
+    height: auto;  
 }
 
 .card{
@@ -118,17 +118,6 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.card-date{
-
-    width: 50vw;
-    height: 30vh;
-    background-color: var(--color-background-card);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.246) 10px 10px;
-    align-items: center;
-
 }
 
 .card h2{
@@ -175,6 +164,25 @@ main{
     
 }
 
+.amount-card{
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#search-api{
+    
+    display: flex;
+    flex-direction:column;
+    align-items: space-around;
+    width: 15vw;
+    height: 15vh;
+    padding-top: 5vh ;
+}
+
 @media (min-width: 700px){
 
     
@@ -182,25 +190,32 @@ main{
     main{
         justify-content: space-around;
         height: calc(100vh - 120px);
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .card{        
-       
+        
         width: 15vw;
         height: 20vw;
     }
 
-    .card-date{
-    
-    width: 70vw;
-    height: 10vh;
-    background-color: var(--color-background-card);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.246) 10px 10px;
-    align-items: center;
-
+    .amount-card{
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
+
+    #search-api{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 20em;
+    height: 20vh;
+}
  
     
 }

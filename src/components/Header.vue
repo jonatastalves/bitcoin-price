@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav class="container">
-            <a href="/"><img alt="Bitcoin-price" id="logo" src="https://theme.zdassets.com/theme_assets/2284639/4b20ea7e1106988b0e6b99903a770e49692d7080.png"></a>
+            <router-link to="/"><img alt="Bitcoin-price" id="logo" src="https://theme.zdassets.com/theme_assets/2284639/4b20ea7e1106988b0e6b99903a770e49692d7080.png"></router-link>
 
             <img v-on:click="openMenu" alt="Abrir menu" id="menu-button" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
 
@@ -11,13 +11,10 @@
 
                 <img alt="Bitcoin-price" id="menu-logo" src="https://cdn-images-1.medium.com/max/1200/1*UlDujYjQ6qMTV_b2klTOYg.png">
 
-                <div id="search-api">
-                    <p id="historical"> View historical price:</p>
-                    
-                    <input type="date" name="date-search" id="date-search">
-
-                    <input type="button" value="Buscar" id="button-search">
-                </div>
+            <div id="search-api">    
+                <input type="date" name="date-search" id="date-search">
+                <router-link to ="/historical"><input type="button" value="Search for date" id="button-search"></router-link>
+            </div>                
 
             </div>
 
@@ -118,20 +115,43 @@ nav{
     height: 10%;
 }
 
+#button-search{
+
+    width: 10em;
+    height: 2.5em;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-background-button);
+    box-shadow: black 2px 2px;
+    color: white;
+}
+
+#button-search:hover{
+    cursor:pointer
+}
+
+#date-search{
+    
+    width: 10em;
+    height: 2.5em;
+    border-radius: 5px;
+    border: none;
+    box-shadow: black 2px 2px;
+    
+}
+
 @media (min-width: 700px){
     
     #menu-button, #menu-logo, #menu-overlay{
         display: none;
     }
-
     #menu-items{
         display: flex;
         flex-direction: row;
         position: static;
         height: 60px;
-        width: 25%;
+        width: 18%;
     }
-
     #search-api{
     display: flex;
     flex-direction: row;

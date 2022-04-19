@@ -11,11 +11,8 @@
 
                 <img alt="Bitcoin-price" id="menu-logo" src="https://cdn-images-1.medium.com/max/1200/1*UlDujYjQ6qMTV_b2klTOYg.png">
 
-            <div id="search-api">    
-                <input type="date" name="date-search" id="date-search">
-                <router-link to ="/historical"><input type="button" value="Search for date" id="button-search"></router-link>
-            </div>                
-
+            <router-link to="/historical"><button id="button-search">Search for date</button></router-link>
+            
             </div>
 
         </nav>
@@ -24,12 +21,14 @@
 
 <script>
 
+
 export default{
     name: 'Header',
     data(){
         return {
             menuActive: false
         }
+        
     },
     methods:{
         openMenu: function(){
@@ -37,8 +36,9 @@ export default{
         },
         closeMenu: function(){
             this.menuActive = false;
-        }
+        },
     }
+    
 }
 </script>
 

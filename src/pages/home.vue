@@ -21,12 +21,34 @@ export default{
             coinsPrice: {}
         }
     },
-     mounted(){
-        api.get('/price?ids=bitcoin%2Cethereum%2Ccosmos%2Cdacxi%2Cterra-luna&vs_currencies=usd%2Cbrl%2Ceur').then(response =>{
+
+    methods:{ 
+        
+        getCoinsPrice: function() {
+
+            api.get('simple/price?ids=bitcoin%2Cethereum%2Ccosmos%2Cdacxi%2Cterra-luna&vs_currencies=usd%2Cbrl%2Ceur').then(response =>{
             this.coinsPrice = response.data
-        })
+            }) 
+
+            this.liveInfo()
+
+        },
+
+        liveInfo: function(){
+            setTimeout(()=>{
+                this.getCoinsPrice()
+            },10000)
+        }
+    },
+    mounted(){
+
+        this.getCoinsPrice();
     }
+
 }
+
+
+
 
 
 </script>
